@@ -1,0 +1,173 @@
+body, h1, h2, h3, h4, h5, h6 {
+    font-size-adjust: 0.58; // Keep font size same regardless of font family.
+    padding: 0;
+    margin: 1.5em 0em 0.25em 0em;
+    vertical-align: baseline;
+    line-height: 1em;
+    position: relative;
+}
+
+h1 {
+    margin: 1em 0em 0.5em 0em;
+}
+
+h4 {
+    margin: 1em 0em 0.75em 0em;
+}
+
+h5 {
+    margin: 0em 0em 0.5em 0em;
+    color: $color-text-h5;
+    color: var(--color-text-h5);
+    max-width: 580px;
+}
+
+h6 {
+    margin: 0.5em 0 0.25em 0;
+    color: $color-header;
+    font-size: 36px;
+    font-family: "Spessman", sans-serif;
+    @at-root {
+        @font-face {
+            font-family: "Spessman";
+            src: url("../assets/misc/spessmanfont.ttf");
+        }
+    }
+}
+
+p {
+    margin-bottom: 10px;
+}
+
+body {
+    color: $color-text;
+    color: var(--color-text);
+    margin: 0 auto;
+    padding: 0;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    font-size: 1.125em;
+    line-height: 22px;
+    line-height: 1.375em;
+    @include respond-to(medium-screen) {
+        line-height: 20px;
+        line-height: 1.4em;
+    }
+}
+
+.ul-reset {
+    list-style-type: none;
+    padding: 0 0;
+    margin-top: 0;
+}
+
+.a-reset {
+    color: inherit;
+    text-decoration: inherit;
+    &:hover {
+        color: inherit;
+        text-decoration: inherit;
+    }
+    &:active {
+        color: inherit;
+        text-decoration: inherit;
+    }
+    &:focus {
+        color: inherit;
+        text-decoration: inherit;
+    }
+}
+
+* {
+    border-radius: 5px;
+}
+
+img {
+    vertical-align: middle;
+}
+
+.image-stack {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    position: relative;
+}
+
+.image-stack_top {
+    grid-column: 4 / -4;
+    grid-row: 1; // make this image be on the same row
+    padding-top: 20%; // this pushes the image down, and keeps it proportional as it resizes
+    z-index: 1; // make this image render on top of the bottom
+}
+
+.image-stack_bottom {
+    grid-column: 1 / span 8;
+    grid-row: 1; // must be on the same row as the other image
+    -webkit-filter: blur(.25px) brightness(90%) contrast(90%) saturate(90%); /* Safari 6.0 - 9.0 */
+    filter: blur(.25px) brightness(90%) contrast(90%) saturate(90%);
+}
+
+.image-float_right {
+    align-self: flex-end;
+    position: absolute;
+    z-index: 0;
+}
+
+// Links are coloured appropriately, so they don't look terrible
+a, .link {
+    color: $color-link; // CSS3 variable fallback
+    color: var(--color-link);
+    text-decoration: none;
+    &:hover {
+        color: $color-link-hover;
+        color: var(--color-link-hover);
+        text-decoration: underline;
+    }
+    &:active {
+        color: $color-link-active;
+        color: var(--color-link-active);
+    }
+}
+
+.body-content {
+    padding: 0 $pad;
+}
+
+// All post content is centred, except for text. On Desktops there is a 10% spacing on either side, and on large screens there's 27.5% spacing either side.
+.post-content {
+    display: flex;
+
+    flex-direction: column;
+    align-items: center;
+    @include respond-to(small-screen) {
+        margin: 0 auto;
+        width: 90%;
+    }
+    @include respond-to(medium-screen) {
+        margin: 0 auto;
+        width: 80%;
+    }
+    @include respond-to(large-screen) {
+        margin: 0 auto;
+        width: 65%;
+    }
+    @include respond-to(extra-large-screen) {
+        margin: 0 auto;
+        width: 45%;
+    }
+
+    h1, h2, h3, h4, h5, p, ul, ol {
+        align-self: flex-start;
+        z-index: 1;
+    }
+    .centred {
+        align-self: center;
+    }
+}
+
+.preload * {
+    -webkit-transition: none !important;
+    -moz-transition: none !important;
+    -ms-transition: none !important;
+    -o-transition: none !important;
+    transition: none !important;
+}

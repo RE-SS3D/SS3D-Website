@@ -1,0 +1,4 @@
+# Created by Zola
+public
+# We don't want to commit resized images
+static/processed_images

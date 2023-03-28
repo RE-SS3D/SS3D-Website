@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+<div>
+  <div class="image">
+    <img src="{{ get_url(path=page.extra.image) }}">
+  </div>
+  {% if page.extra.image_credit %}
+  <h5><i>Image credit: {{ page.extra.image_credit }}</i></h5>
+  {% endif %}
+</div>
+
+<h1>{{ page.title }}</h1>
+<h5><i>{{ page.date | date(format="%A, %B %-d, %Y") }}</i></h5>
+<h5><i>Written by: {{ page.extra.author }}</i></h5>
+{% if page.extra.monthly_release %}
+<h2>SS3D Build: 
+  <u>
+    <a href="{{ config.extra.github_game_url }}/releases/download/{{ page.extra.monthly_release }}/RESS3D_{{ page.extra.monthly_release }}.zip" target="_blank">v{{ page.extra.monthly_release }}</a>
+  </u>
+</h2>
+{% endif %}
+{% if page.extra.release %}
+<h2>SS3D Build: 
+  <u>
+    <a href="{{ config.extra.github_game_url }}/releases/download/{{ page.extra.release }}/SS3D_{{ page.extra.release }}.zip" target="_blank">v{{ page.extra.release }}</a>
+  </u>
+</h2>
+{% endif %}
+<br>
+
+{{ page.content | safe }}
+
+{% endblock content %}

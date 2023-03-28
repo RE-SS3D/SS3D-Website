@@ -1,0 +1,39 @@
+$color-link : rgb(184, 61, 50);
+$color-link-hover: #fd7970;
+$color-link-active: lighten($color-link, 10);
+$color-text: #dadada;
+$color-text-h5: #666666;
+$color-navbar: #1e4684;
+$color-navbar-hover: #111111;
+$color-navbar-scroll-shadow: darken($color-link, 25);
+$color-navbar-active: #9f90ce;
+$color-navbar-text: #ffffff;
+$color-background: #050608;
+$color-header: #b14335;
+$color-social-icon: #dd1d0c;
+
+:root {
+    --color-link: #{$color-link};
+    --color-link-hover: #{$color-link-hover};
+    --color-link-active: #{$color-link-active};
+    --color-text: #{$color-text};
+    --color-text-h5: #{$color-text-h5};
+    --color-navbar: #{$color-navbar};
+    --color-navbar-hover: #{$color-navbar-hover};
+    --color-navbar-scroll-shadow: #{$color-navbar-scroll-shadow};
+    --color-navbar-active: #{$color-navbar-active};
+    --color-navbar-text: #{$color-navbar-text};
+    --color-background: #{$color-background};
+    --color-header: #{$color-header};
+}
+
+$pad: 1em;
+
+/* Used with @mixin respond-to($name) mixin */
+$breakpoints: (
+    'tiny-screen': ( max-width: 600px ),
+    'small-screen': ( min-width: 600px ),
+    'medium-screen': ( min-width: 840px ),
+    'large-screen': ( min-width: 1080px ),
+    'extra-large-screen': ( min-width: 1600px )
+);

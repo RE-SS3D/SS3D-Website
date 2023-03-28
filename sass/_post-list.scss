@@ -1,0 +1,38 @@
+.post-content ul.post-list {
+    align-self: center;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.post-row {
+    @include respond-to(large-screen) {
+        max-width: none;
+        min-width: 800px;
+        width: 70%;
+    }
+    
+    max-width: 580px;
+    padding: 32px 0px;
+
+    img {
+        @include respond-to(large-screen) {
+            width: 52%;
+            float: left;
+        }
+    }
+    .post-text {
+        @include respond-to(large-screen) {
+            width: 44%;
+            float: right;
+        }
+    }
+
+    h2 {
+        margin-top: 0.5em;
+        a {
+            text-decoration: underline;
+        }
+    }
+}

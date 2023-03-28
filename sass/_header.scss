@@ -1,0 +1,60 @@
+header {
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    h1 {
+        font-size: 16px;
+        font-size: 7.5vw;
+        white-space: nowrap;
+        overflow: visible;
+        margin-top: $pad;
+    }
+    h6 {
+        white-space: nowrap;
+        overflow: visible;
+        font-size: 4vw;
+    }
+    div {
+        width: 100%;
+    }
+    img {
+        right: 5px;
+        top: 0px;
+        width: 100%;
+        padding: $pad;
+        padding-top: 0px;
+        padding-bottom: 0px;
+    }
+    @include respond-to(small-screen) {
+        h6 {
+            font-size: 3.7vw;
+        }
+        img {
+            width: 90%;
+        }
+    }
+    @include respond-to(medium-screen) {
+        h6 {
+            font-size: 3.4vw;
+        }
+        img {
+            width: 80%;
+        }
+    }
+    @include respond-to(large-screen) {
+        h6 {
+            font-size: 2.8vw;
+        }
+        img {
+            width: 65%;
+        }
+    }
+    @include respond-to(extra-large-screen) {
+        h6 {
+            font-size: 2vw;
+        }
+        img {
+            width: 45%;
+        }
+    }
+}

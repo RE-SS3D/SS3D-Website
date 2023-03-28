@@ -1,0 +1,14 @@
+{% set abspath = src  %}
+{% set meta = get_image_metadata(path=abspath) %}
+{% set width = meta.width %}
+{% set srcset_list = [] %}
+{% set image_config = config.extra.images | get(key=kind) %}
+{% for s in image_config.image_sizes %}
+    {% if width >= s %}
+        {% set resized = resize_image(path=abspath, width=s, op="fit_width") %}
+        {% set element = resized.url ~ " " ~ s ~ "w" %}
+        {% set_global srcset_list = srcset_list | concat(with=[element]) %}
+    {% endif %}
+{% endfor %}
+{% set default_resized = resize_image(path=abspath, width=image_config.default_size, op="fit_width") %}
+<img src="{{ default_resized.url | safe }}" srcset="{{ srcset_list | join(sep=", ") | safe }}" sizes="{{ image_config.sizes }}" />

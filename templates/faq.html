@@ -1,0 +1,12 @@
+
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="image-float_right">
+    <img src="{{ get_url(path="/assets/img/Writer.png") }}" alt="Writer" width="400px">
+</div>
+
+{{ page.content | safe }}
+
+{% endblock content %}

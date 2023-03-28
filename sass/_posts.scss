@@ -1,0 +1,123 @@
+#doublevid { 
+    width: 580px; 
+    height: auto; 
+    margin: 0 auto;
+}
+
+#vid1 { 
+    width: 49%; 
+    height: 285px; 
+    float: left;
+}
+
+#vid2 { 
+    width: 49%; 
+    height: 285px; 
+    float: right; 
+}
+
+.vidclear{
+    clear: both;
+}
+
+@media (max-width:580px) {
+    #doublevid{
+        width: 100%;
+        height: auto;
+    }
+    #vid1 {
+        width: 100%;
+        height: auto;
+        float: none;
+    }
+    #vid2 {
+        width: 100%;
+        height: auto;
+        float: none;
+    }
+}
+
+.horizontal-3 {
+    overflow: hidden;
+    white-space:nowrap;
+    align-self: center;
+    max-width: 580px;
+
+    div {
+        display: inline-block;
+        width: 32.5%;
+        margin: 0;
+        &::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+        a {
+            float: left;
+            padding: 5px;
+            &:first-child {
+                padding-left: 0;
+            }
+            &:last-child {
+                padding-right: 0;
+            }
+        }
+    }
+}
+
+.horizontal-2 {
+    // TODO: Overflow should be removed, along with modifying width: 50% so that there is fixed spacing between the horizontal elements.
+    overflow: hidden;
+    white-space:nowrap;
+    align-self: center;
+    max-width: 580px;
+
+    div {
+        display: inline-block;
+        width: 49.5%;
+        
+        &::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+        a {
+            padding: 5px;
+            padding-left: 0;
+            &:last-child {
+                padding-right: 0;
+            }
+        }
+    }
+}
+
+.horizontal-2-direct-children-desktop {
+    @include respond-to(medium-screen) { 
+        &::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+        & > p, & > div {
+            width: 50%;
+            padding: 5px;
+            padding-left: 0;
+            &:last-child {
+                padding-right: 0;
+            }
+        }
+    }
+}
+
+// Ensure that images and videos appear in the middle of the screen.
+// Add a bit of spacing at the bottom as if it was inline with a paragraph
+div.image, .post-content video, .post-content .video {
+    align-self: center;
+    margin-top: 0.5em;
+    margin-bottom: 0.25em;
+}
+
+// Images and videos can't be bigger than the post-content area
+.post-content img, .post-content video, .post-content .video {
+    max-width: 100%;
+}

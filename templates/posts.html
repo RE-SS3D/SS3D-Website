@@ -1,0 +1,26 @@
+
+{% extends "base.html" %}
+
+
+{% block content %}
+<ul class="ul-reset post-list">
+{% for post in section.pages %}
+{% set url = get_url(path=post.path) %}
+<li class="post-row">
+    <a style="white-space: nowrap;" href="{{ url }}">
+        <img src="{{ resize_image(path=post.extra.image, width=624, op="fit_width") | get(key="url") }}">
+    </a>
+    <div class="post-text">
+        <h2><a href="{{ url }}">{{ post.title}}</a></h2>
+        <a class="a-reset" href="{{ url }}"><span class="postDate">{{ post.date | date(format="%b %-d, %Y") }}</span></a>
+        {% if post.extra.monthly_release %}
+        <h5><a class="a-reset" href="{{ url }}">v{{ post.extra.monthly_release }}</a></h5>
+        {% endif %}
+        <div class="post-description">
+            <a class="a-reset" href="{{ url }}"><p>{{ post.description }}</p></a>
+        </div>
+    </div>
+</li>
+{% endfor %}
+</ul>
+{% endblock content %}

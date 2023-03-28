@@ -1,0 +1,24 @@
+# The URL the site will be built for
+base_url = "https://ss3d.space/"
+
+# Whether to automatically compile all Sass files in the sass directory
+compile_sass = true
+
+# Whether to build a search index to be used later on by a JavaScript library
+build_search_index = false
+
+[markdown]
+# Whether to do syntax highlighting
+# Theme can be customised by setting the `highlight_theme` variable to a theme supported by Zola
+highlight_code = false
+
+[extra]
+# Put all your custom variables here
+
+github_game_url = "https://github.com/RE-SS3D/SS3D"
+discord_url = "https://discord.gg/3ny9tdH"
+
+[extra.images.post]
+default_size = 580
+image_sizes = [290, 580]
+sizes = "(max-width: 624px) 100vw, 580px"

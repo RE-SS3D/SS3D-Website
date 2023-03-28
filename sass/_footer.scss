@@ -1,0 +1,38 @@
+.contact {
+    padding: 25px 0;
+    ul {
+        text-align: center;
+    }
+
+    .social-icons {
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+
+        a {
+            white-space: normal;
+        }
+        li {
+            margin-left: 30px;
+            width: 35px;
+            &:first-child {
+                margin-left: 0;
+            }
+            @include respond-to(small-screen) {
+                margin-left: 40px;
+                width: 45px;
+            }
+        }
+    }
+
+    .legal-list {
+        li {
+            display: inline-block;
+            margin-left: 16px;
+        }
+    }
+}
+
+.social-icon-bg {
+    fill: $color-social-icon;
+}
