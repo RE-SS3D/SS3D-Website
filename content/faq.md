@@ -3,7 +3,7 @@ template = "faq.html"
 title = "FAQ"
 +++
 
-## What is RE:SS3D?
+## What is SS3D?
 
 Yet another Space Station 13 remake...<br>
 but we added an extra dimension to this one.<br>
@@ -53,6 +53,6 @@ There are several ways you can help, from 2d art, 3d art, sfx, programming, web 
 
 ## Who is *beep?
 
-*beep is the original creator of SS3D, hence the name RE:SS3D. For more info on his tale check out our [About page](/about/).
+*beep is the original creator of SS3D. For more info on his tale check out our [About page](/about/).
 
 His current status and whereabouts are still unknown. *If only he had turned his damn suit sensors on...*
