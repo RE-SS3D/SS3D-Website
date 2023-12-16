@@ -25,7 +25,7 @@ We do not plan to implement first-person/VR or any other camera perspective in o
 
 ## Is there a playable demo?
 
-Our [Download page]({{ site.baseurl }}/download/) will automatically download out latest release, but you can find more detailed info on our [GitHub repo]({{ site.github_game_url }}#downloads).
+Our [Download page](/download/) will automatically download out latest release, but you can find more detailed info on our [GitHub repo]({{ site.github_game_url }}#downloads).
 
 Just don't expect much to do yet as the game is currently in a 'pre-alpha' phase as we do some redesigning, documenting, core system work, and basic system implementation. During this early phase there are not many systems, content, or even interactions. What you see in the current project is just the beginning to something much, much greater.
 
@@ -49,10 +49,10 @@ Since the project is open source, if we don't add it, you'll be free to add it y
 
 ## How can I help?
 
-There are several ways you can help, from 2d art, 3d art, sfx, programming, web development and more, just visit our [Contribute page]({{ site.baseurl }}/contribute/) and come join our {{ discord() }}!
+There are several ways you can help, from 2d art, 3d art, sfx, programming, web development and more, just visit our [Contribute page](/contribute/) and come join our {{ discord() }}!
 
 ## Who is *beep?
 
-*beep is the original creator of SS3D, hence the name RE:SS3D. For more info on his tale check out our [About page]({{ site.baseurl }}/about/).
+*beep is the original creator of SS3D, hence the name RE:SS3D. For more info on his tale check out our [About page](/about/).
 
 His current status and whereabouts are still unknown. *If only he had turned his damn suit sensors on...*
