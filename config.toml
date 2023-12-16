@@ -53,3 +53,8 @@ url = "https://twitter.com/SpaceStation3D"
 default_size = 580
 image_sizes = [290, 580]
 sizes = "(max-width: 624px) 100vw, 580px"
+
+[extra.images.split]
+default_size = 290
+image_sizes = [290]
+sizes = "(max-width: 624px) 50vw, 290px"
