@@ -18,6 +18,36 @@ highlight_code = false
 github_game_url = "https://github.com/RE-SS3D/SS3D"
 discord_url = "https://discord.gg/3ny9tdH"
 
+[[extra.social_icons]]
+title = "GitHub"
+name = "github"
+url = "https://github.com/RE-SS3D"
+
+[[extra.social_icons]]
+title = "Patreon"
+name = "patreon"
+url = "https://www.patreon.com/ss3d"
+
+[[extra.social_icons]]
+title = "Discord"
+name = "discord"
+url = "https://discord.gg/3ny9tdH"
+
+[[extra.social_icons]]
+title = "YouTube"
+name = "youtube"
+url = "https://www.youtube.com/@spacestation3d"
+
+[[extra.social_icons]]
+title = "Reddit"
+name = "reddit"
+url = "https://reddit.com/r/RESS3D"
+
+[[extra.social_icons]]
+title = "Twitter"
+name = "twitter"
+url = "https://twitter.com/SpaceStation3D"
+
 [extra.images.post]
 default_size = 580
 image_sizes = [290, 580]
