@@ -1,5 +1,5 @@
 +++
-title = "List of devblog posts"
+title = "Devblog"
 path = "devblog"
 sort_by = "date"
 template = "posts.html"
