@@ -25,7 +25,7 @@ We do not plan to implement first-person/VR or any other camera perspective in o
 
 ## Is there a playable demo?
 
-Our [Download page](/download/) will automatically download out latest release, but you can find more detailed info on our [GitHub repo]({{ site.github_game_url }}#downloads).
+Our [Download page](/download/) will automatically download out latest release, but you can find more detailed info on our {{ link(key="github_game_url", text="GitHub repo", path="#downloads") }}.
 
 Just don't expect much to do yet as the game is currently in a 'pre-alpha' phase as we do some redesigning, documenting, core system work, and basic system implementation. During this early phase there are not many systems, content, or even interactions. What you see in the current project is just the beginning to something much, much greater.
 
@@ -39,9 +39,9 @@ The game is being built in Unity, and uses Mirror for networking. For legal reas
 
 ## What license is the project distributed under?
 
-All code assets use the [**MIT license**]({{ site.github_game_url }}/blob/master/Documents/LICENSE-CODE.md), only requiring attribution when used.
+All code assets use the {{ link(key="github_game_url", text="**MIT license**", path="/blob/master/Documents/LICENSE-CODE.md") }}, only requiring attribution when used.
 
-All art assets use the [**CC BY-NC-SA 4.0 license**]({{ site.github_game_url }}/blob/master/Documents/LICENCE-ASSETS.md), requiring attribution, same license, and only for non-commercial uses. Keep in mind that contributions are NOT retractable. Once submitted, the project has the license to use your contribution indefinitely.
+All art assets use the {{ link(key="github_game_url", text="**CC BY-NC-SA 4.0 license**", path="/blob/master/Documents/LICENCE-ASSETS.md") }}, requiring attribution, same license, and only for non-commercial uses. Keep in mind that contributions are NOT retractable. Once submitted, the project has the license to use your contribution indefinitely.
 
 ## Will there be "X" feature?
 
