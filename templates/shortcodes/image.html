@@ -11,6 +11,4 @@
     {% endif %}
 {% endfor %}
 {% set default_resized = resize_image(path=abspath, width=image_config.default_size, op="fit_width") %}
-<div class="image"><a href="/{{ src }}" class="image-link" target="_blank">
-<img src="{{ default_resized.url | safe }}" srcset="{{ srcset_list | join(sep=", ") | safe }}" sizes="{{ image_config.sizes }}" />
-</a></div>
+<div class="image"><a href="/{{ src }}" class="image-link" target="_blank"><img src="{{ default_resized.url | safe }}" srcset="{{ srcset_list | join(sep=", ") | safe }}" sizes="{{ image_config.sizes }}" /></a></div>
