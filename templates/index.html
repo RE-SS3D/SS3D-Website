@@ -2,7 +2,44 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h1 class="title">
-  This is my blog made with Zola.
-</h1>
+<centred><h4><i>"Welcome to the station crew. Enjoy your stay."</i></h4></centred>
+
+<div>
+    <iframe class="video" width="580px" height="272px" src="https://www.youtube-nocookie.com/embed/uzLdgxOBPrc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <h5><i>Video credit - Grimmie</i></h5>
+</div>
+
+<p>
+  Space Station 3D is a 3D take on the infamous Space Station 13 (tm). It is in pre-alpha still so there isn't much content yet, but if you want to play-test it, the download link below is for the latest release.
+</p>
+
+  {% set blogs = get_section(path="devblog/_index.md") %}
+  {% set latest_blog = blogs.pages | first %}
+  {% set release = latest_blog.extra.release %}
+
+<centred>
+    <h6>
+        <u><a href="{{ config.extra.github_game_url }}/releases/download/{{ release }}/SS3D_{{ release }}.zip">ss3d {{ release }}</a></u>
+    </h6>
+</centred>
+
+{% set post = latest_blog %}
+{% set url = get_url(path=post.path) %}
+<centred><h2>Latest Blog Post:</h2></centred>
+<li class="post-row">
+    <a style="white-space: nowrap;" href="{{ url }}">
+        <img src="{{ resize_image(path=post.extra.image, width=624, op="fit_width") | get(key="url") }}">
+    </a>
+    <div class="post-text">
+        <h2><a href="{{ url }}">{{ post.title}}</a></h2>
+        <a class="a-reset" href="{{ url }}"><span class="postDate">{{ post.date | date(format="%b %-d, %Y") }}</span></a>
+        {% if post.extra.monthly_release %}
+        <h5><a class="a-reset" href="{{ url }}">v{{ post.extra.monthly_release }}</a></h5>
+        {% endif %}
+        <div class="post-description">
+            <a class="a-reset" href="{{ url }}"><p>{{ post.description }}</p></a>
+        </div>
+    </div>
+</li>
+
 {% endblock content %}
