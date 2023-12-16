@@ -13,7 +13,7 @@
 
 <h1>{{ page.title }}</h1>
 <h5><i>{{ page.date | date(format="%A, %B %-d, %Y") }}</i></h5>
-<h5><i>Written by: {{ page.extra.author }}</i></h5>
+<h5><i>Written by: {{ page.authors | join(sep=", ") }}</i></h5>
 {% if page.extra.monthly_release %}
 <h2>SS3D Build: 
   <u>
