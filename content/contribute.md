@@ -10,9 +10,11 @@ There are 2 primary ways you can contribute;
 
 # Donation Links
 
-{{ link(key="patreon_url", text="**Patreon**", path="") }}
+<p>
+{{ link(key="patreon_url", text="**Patreon**", path="") }}<br/>
 
 {{ link(key="paypal_url", text="**Paypal**", path="") }}
+</p>
 
 # Development
 
