@@ -22,10 +22,10 @@
 </h2>
 {% endif %}
 {% if page.extra.release %}
-<h2>SS3D Build: 
-  <u>
-    <a href="{{ config.extra.github_game_url }}/releases/download/{{ page.extra.release }}/SS3D_{{ page.extra.release }}.zip" target="_blank">v{{ page.extra.release }}</a>
-  </u>
+<h2>SS3D {{ page.extra.release }}
+  <h4>
+    <a href="{{ config.extra.github_game_url }}/releases/download/{{ page.extra.release }}/SS3D_{{ page.extra.release }}.zip">Download</a> - <a href="{{ config.extra.github_game_url }}/releases/tag/{{ page.extra.release }}">Changelog</a>
+  </h4>
 </h2>
 {% endif %}
 <br>
