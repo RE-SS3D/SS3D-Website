@@ -77,11 +77,11 @@ title = "Art"
 
 # Goao (John)
 
-### [Breach](https://soundcloud.com/joao-pedro-buratto/breach){:target="_blank"}
+### [Breach](https://soundcloud.com/joao-pedro-buratto/breach)
 
-### [Title 3 - Tin Tin REMIX](https://soundcloud.com/joao-pedro-buratto/tin-tin-title3-mix-7-version-6){:target="_blank"}
+### [Title 3 - Tin Tin REMIX](https://soundcloud.com/joao-pedro-buratto/tin-tin-title3-mix-7-version-6)
 
-### [Traitor REMIX](https://soundcloud.com/joao-pedro-buratto/traitor-mix2){:target="_blank"}
+### [Traitor REMIX](https://soundcloud.com/joao-pedro-buratto/traitor-mix2)
 
 <div class='horizontal-2' markdown='1'>
 {{ image(kind="split", src="assets/img/art/Goao/JohnDrifting.png") }}
@@ -115,7 +115,7 @@ title = "Art"
 
 {{ image(kind="post", src="assets/img/art/Igiari/Igiari_Halloween2020.png") }}
 
-# [Konstantin3001](https://www.deviantart.com/konstantin3001){:target="_blank"}
+# [Konstantin3001](https://www.deviantart.com/konstantin3001)
 
 {{ image(kind="post", src="assets/img/art/Konstantin3001/KonstantinCultistPoster.png") }}
 
