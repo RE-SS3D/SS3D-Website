@@ -6,7 +6,7 @@ title: "Download"
 <div class="container">
   <div>
     <picture class="logo">
-      <img src="{{ config.extra.github_url }}-art/Artwork/Banners/ClassicBanners/BeepBanner.png" alt="beep banner">
+      <img src="{{ config.extra.github_artwork_url }}/Banners/ClassicBanners/BeepBanner.png" alt="beep banner">
     </picture>
   </div>
   <meta http-equiv="refresh" content="5; URL={{ config.extra.github_game_url }}/releases/download/{{ config.extra.latest_release }}/SS3D_{{ config.extra.latest_release }}.zip" />
