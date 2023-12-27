@@ -26,7 +26,7 @@
 {% set post = latest_blog %}
 {% set url = get_url(path=post.path) %}
 <centred><h2>Latest Blog Post:</h2></centred>
-<li class="post-row">
+<li class="post-row ul-reset">
     <a style="white-space: nowrap;" href="{{ url }}">
         <img src="{{ resize_image(path=post.extra.image, width=624, op="fit_width") | get(key="url") }}">
     </a>
