@@ -1,0 +1,15 @@
+
+{% extends "base.html" %}
+
+{% block content %}
+
+<style type="text/css" media="screen">
+    .container {
+      margin: 10px auto;
+      text-align: center;
+    }
+  </style>
+
+{{ page.content | safe }}
+
+{% endblock content %}
