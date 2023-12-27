@@ -1,9 +1,8 @@
----
-layout: default
-title: Download
-permalink: /download/
++++
+template = "download.html"
+title = "Download"
 release_latest: 0.0.7.0
----
++++
 
 <div class="container">
   <div>
