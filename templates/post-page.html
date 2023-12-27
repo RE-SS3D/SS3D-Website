@@ -14,10 +14,10 @@
 <h1>{{ page.title }}</h1>
 <h5><i>{{ page.date | date(format="%A, %B %-d, %Y") }}</i></h5>
 <h5><i>Written by: {{ page.authors | join(sep=", ") }}</i></h5>
-{% if page.extra.monthly_release %}
+{% if page.extra.old_release %}
 <h2>SS3D Build: 
   <u>
-    <a href="{{ config.extra.github_game_url }}/releases/download/{{ page.extra.monthly_release }}/RESS3D_{{ page.extra.monthly_release }}.zip" target="_blank">v{{ page.extra.monthly_release }}</a>
+    <a href="{{ config.extra.github_game_url }}/releases/download/{{ page.extra.old_release }}/RESS3D_{{ page.extra.old_release }}.zip" target="_blank">v{{ page.extra.old_release }}</a>
   </u>
 </h2>
 {% endif %}

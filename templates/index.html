@@ -33,8 +33,8 @@
     <div class="post-text">
         <h2><a href="{{ url }}">{{ post.title}}</a></h2>
         <a class="a-reset" href="{{ url }}"><span class="postDate">{{ post.date | date(format="%b %-d, %Y") }}</span></a>
-        {% if post.extra.monthly_release %}
-        <h5><a class="a-reset" href="{{ url }}">v{{ post.extra.monthly_release }}</a></h5>
+        {% if post.extra.old_release %}
+        <h5><a class="a-reset" href="{{ url }}">v{{ post.extra.old_release }}</a></h5>
         {% endif %}
         <div class="post-description">
             <a class="a-reset" href="{{ url }}"><p>{{ post.description }}</p></a>
