@@ -3,7 +3,8 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        {% set title = page.title | default (value=section.title) %}
+        {% set sec = section.title | default(value="404") %}
+        {% set title = page.title | default (value=sec) %}
         <title>{{ title ~ " | SS3D" }}</title>
         <link rel="stylesheet" type="text/css" href="{{ get_url(path="site.css") }}">
         <link rel="shortcut icon" type="image/x-icon" href="{{ get_url(path="favicon.ico") }}">
@@ -51,7 +52,7 @@
                         {% elif page.ancestors[1] %}
                             {% set current = get_section(path=page.ancestors[1]) | get(key="path") | safe %}
                         {% else %}
-                            {% set current = page.path %}
+                            {% set current = page.path | default(value="") %}
                         {% endif %}
                         <li><a onclick="setScroll('{{ link.url }}',parentNode.parentNode.parentNode.scrollLeft); return false;"
                             class="{% if link.url == current %}active{% endif %}"
