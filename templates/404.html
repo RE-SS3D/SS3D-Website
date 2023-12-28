@@ -3,12 +3,31 @@
 
 {% block content %}
 
++++
+template = "404.html"
+title = "404"
++++
+
 <style type="text/css" media="screen">
   .container {
     margin: 10px auto;
     text-align: center;
   }
 </style>
+
+<div class="image-stack">
+  <div class="image-stack_item image-stack_top">
+    <img src="{{ config.base_url }}/assets/img/404.png" alt="404">
+  </div>
+  <div class="image-stack_item image-stack_bottom">
+    <img src="{{ config.github_artwork)url }}/Cutouts/Avatars/Uncropped/Spaced.png" alt="Spaced" width="170px">
+  </div>
+</div>
+
+<div class="container">
+  <h2><i><strong>ALERT: Location unknown!</strong></i></h2>
+  <h3><u><a href="{{ config.base_url }}">Please return to the station immediately!</a></u></h3>
+</div>
 
 {{ page.content | safe }}
 
