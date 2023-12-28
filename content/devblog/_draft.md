@@ -1,3 +1,8 @@
+
++++
+draft = true
++++
+
 ---
 layout: post
 title:  "00.00 (year.month) : [insert month/quarter] Devblog"
@@ -72,25 +77,22 @@ Cute phrase/quote goes here.
 </div>   
 
 // Displaying a gif:
-{% responsive_image path: assets/img/posts/[insert folder]/gif1.gif template: _includes/srcset-gif.html %}
+{{ image(kind="split", src="assets/img/posts/[insert folder]/gif1.gif") }}
 
 // Displaying a video:
 // Removed 'muted' if the video has sound.
 // Remove 'controls' and add 'autoplay' and 'loop' if you want it to loop.
-<video controls muted poster="{{ site.baseurl }}/assets/img/posts/[insert folder]/VideoThumbnail.png">
-  <source src="{{ site.baseurl }}/assets/img/posts/[insert folder]/Video.webm" type="video/webm">
-  <source src="{{ site.baseurl }}/assets/img/posts/[insert folder]/Video.mp4" type="video/mp4">
+<video autoplay="autoplay" muted loop="loop" width="580px" poster="/assets/img/posts/[insert folder]/VideoThumbnail.png">
+  <source src="/assets/img/posts/[insert folder]/Video.mp4" type="video/mp4">
 </video>
 
 // Displaying 2 videos horizontally
 <div id="doublevid"> 
-    <video id="vid1" width="285" height="285" poster="{{ site.baseurl }}/assets/img/posts/[insert folder]/VideoThumbnail.png" autoplay loop muted> 
-      <source src="{{ site.baseurl }}/assets/img/posts/[insert folder]/Video.webm" type="video/webm">
-      <source src="{{ site.baseurl }}/assets/img/posts/[insert folder]/Video.mp4" type="video/mp4">
+    <video id="vid1" width="285" height="285" poster="/assets/img/posts/[insert folder]/VideoThumbnail.png" autoplay loop muted> 
+      <source src="/assets/img/posts/[insert folder]/Video.mp4" type="video/mp4">
     </video>
-    <video id="vid2" width="285" height="285" poster="{{ site.baseurl }}/assets/img/posts/[insert folder]/VideoThumbnail.png" autoplay loop muted> 
-      <source src="{{ site.baseurl }}/assets/img/posts/[insert folder]/Video.webm" type="video/webm">
-      <source src="{{ site.baseurl }}/assets/img/posts/[insert folder]/Video.mp4" type="video/mp4">
+    <video id="vid2" width="285" height="285" poster="/assets/img/posts/[insert folder]/VideoThumbnail.png.png" autoplay loop muted> 
+      <source src="/assets/img/posts/[insert folder]/Video.mp4" type="video/mp4">
     </video>
     <div class="vidclear"></div> 
 </div>
