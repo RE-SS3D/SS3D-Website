@@ -16,11 +16,11 @@ This website is setup for use with [Zola](https://www.getzola.org). Install inst
 ### Windows
 
 1. Clone this repo.
-2. Downloaded latest version (for windows) on [their Github](https://github.com/getzola/zola/releases).
-3. Move the .exe to the repo directory.
-4. Build the site by opening Command Prompt and using a couple commands:
+2. Downloaded latest version (for windows) on [Zola's Github Releases](https://github.com/getzola/zola/releases).
+3. Move the downloaded .exe to the repo directory.
+4. Build the site by opening Command Prompt with the following commands:
 ```
-    cd <insert repo directory>
+    cd "<insert repo directory>"
     zola serve
 ```
 The site should host locally at <http://localhost:1111/>.
