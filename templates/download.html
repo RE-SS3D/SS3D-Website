@@ -13,7 +13,7 @@
 <div class="container">
   <div>
     <picture class="logo">
-      <img src="/static/assets/img/beep.png" alt="beep banner">
+      <img src="{{ get_url(path="/assets/img/beep.png") }}" alt="beep banner">
     </picture>
   </div>
   <meta http-equiv="refresh" content="7; URL={{ config.extra.github_game_url }}/releases/download/{{ config.extra.latest_release }}/SS3D_{{ config.extra.latest_release }}.zip" />
