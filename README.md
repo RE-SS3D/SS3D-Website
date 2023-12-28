@@ -23,3 +23,13 @@ This website is setup for use with [Zola](https://www.getzola.org). Install inst
     cd <insert repo directory>
     zola serve
 5. The site should host locally at <http://localhost:1111/>.
+
+## Creating the Devblog
+
+A checklist regarding the process of the devblog can be found on our [management board](https://trello.com/c/jLB9dKJH).
+
+## LICENSE
+
+All **CODE** falls under the **[MIT](https://github.com/RE-SS3D/.github/blob/main/LICENSE-CODE.md)** license.
+
+All **ASSETS** fall under the **[CC BY-NC-SA 4.0](https://github.com/RE-SS3D/.github/blob/main/LICENSE-ASSETS.md)** license.
