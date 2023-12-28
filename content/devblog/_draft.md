@@ -133,4 +133,4 @@ Cute phrase/quote goes here.
 
 // 'Conclusion' is the final wrap-up and goodbye, and include the discord link, as tradition.
 
-Goodbye summary goes here, including our discord link. [Discord link]({{ site.discord_url }}){:target="_blank"}.
+Goodbye summary goes here, including our discord link. {{ link(key="discord_url", text="Discord link", path="") }}
