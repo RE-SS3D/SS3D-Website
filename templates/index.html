@@ -13,9 +13,9 @@
   Space Station 3D is a 3D take on the infamous Space Station 13 (tm). It is in pre-alpha still so there isn't much content yet, but if you want to play-test it, the download link below is for the latest release.
 </p>
 
-  {% set blogs = get_section(path="devblog/_index.md") %}
-  {% set latest_blog = blogs.pages | first %}
-  {% set release = latest_blog.extra.release %}
+{% set blogs = get_section(path="devblog/_index.md") %}
+{% set latest_blog = blogs.pages | first %}
+{% set release = latest_blog.extra.release %}
 
 <centred>
     <h6>
