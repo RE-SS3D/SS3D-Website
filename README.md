@@ -23,7 +23,7 @@ This website is setup for use with [Zola](https://www.getzola.org). Install inst
     cd <insert repo directory>
     zola serve
 ```
-5. The site should host locally at <http://localhost:1111/>.
+The site should host locally at <http://localhost:1111/>.
 
 ## Creating the Devblog
 
