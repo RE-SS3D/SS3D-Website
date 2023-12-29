@@ -1,0 +1,27 @@
+
+{% extends "base.html" %}
+
+{% block content %}
+
+<style type="text/css" media="screen">
+  .container {
+    margin: 10px auto;
+    text-align: center;
+  }
+</style>
+
+<div class="image-stack">
+  <div class="image-stack_item image-stack_top">
+    <img src="{{ get_url(path="/assets/img/404.png") }}" alt="404">
+  </div>
+  <div class="image-stack_item image-stack_bottom">
+    <img src="{{ config.extra.github_artwork_url }}/Cutouts/Avatars/Uncropped/Spaced.png" alt="Spaced" width="170px">
+  </div>
+</div>
+
+<div class="container">
+  <h2><i><strong>ALERT: Location unknown!</strong></i></h2>
+  <h3><u><a href="{{ config.base_url }}">Please return to the station immediately!</a></u></h3>
+</div>
+
+{% endblock content %}

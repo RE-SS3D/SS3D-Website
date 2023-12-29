@@ -19,8 +19,9 @@ external_links_target_blank = true
 [extra]
 # Put all your custom variables here
 
-github_game_url = "https://github.com/RE-SS3D/SS3D"
 github_url = "https://github.com/RE-SS3D"
+github_game_url = "https://github.com/RE-SS3D/SS3D"
+github_artwork_url = "https://raw.githubusercontent.com/RE-SS3D/SS3D-Art/main/Artwork"
 discord_url = "https://discord.gg/3ny9tdH"
 twitter_url = "https://twitter.com/SpaceStation3D"
 youtube_url = "https://www.youtube.com/@spacestation3d"
@@ -29,6 +30,8 @@ paypal_url = "https://www.paypal.me/SpaceStation3D"
 animators_kit_url = "https://www.youtube.com/@spacestation3d"
 subscribestar_url = "https://www.subscribestar.com/space-station-3d"
 gitbook_url = "https://ss3d.gitbook.io"
+
+latest_release = "0.0.7.0"
 
 [[extra.social_icons]]
 title = "GitHub"

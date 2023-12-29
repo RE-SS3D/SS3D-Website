@@ -13,13 +13,13 @@
   Space Station 3D is a 3D take on the infamous Space Station 13 (tm). It is in pre-alpha still so there isn't much content yet, but if you want to play-test it, the download link below is for the latest release.
 </p>
 
-  {% set blogs = get_section(path="devblog/_index.md") %}
-  {% set latest_blog = blogs.pages | first %}
-  {% set release = latest_blog.extra.release %}
+{% set blogs = get_section(path="devblog/_index.md") %}
+{% set latest_blog = blogs.pages | first %}
+{% set release = latest_blog.extra.release %}
 
 <centred>
     <h6>
-        <u><a href="{{ config.extra.github_game_url }}/releases/download/{{ release }}/SS3D_{{ release }}.zip">ss3d {{ release }}</a></u>
+        <u><a href="{{ config.extra.github_game_url }}/releases/download/{{ config.extra.latest_release }}/SS3D_{{ config.extra.latest_release }}.zip">ss3d {{ config.extra.latest_release }}</a></u>
     </h6>
 </centred>
 
@@ -33,8 +33,8 @@
     <div class="post-text">
         <h2><a href="{{ url }}">{{ post.title}}</a></h2>
         <a class="a-reset" href="{{ url }}"><span class="postDate">{{ post.date | date(format="%b %-d, %Y") }}</span></a>
-        {% if post.extra.monthly_release %}
-        <h5><a class="a-reset" href="{{ url }}">v{{ post.extra.monthly_release }}</a></h5>
+        {% if post.extra.release %}
+        <h5><a class="a-reset" href="{{ url }}">v{{ post.extra.release }}</a></h5>
         {% endif %}
         <div class="post-description">
             <a class="a-reset" href="{{ url }}"><p>{{ post.description }}</p></a>

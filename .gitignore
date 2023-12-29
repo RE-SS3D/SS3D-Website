@@ -1,4 +1,8 @@
 # Created by Zola
 public
-# We don't want to commit resized images
+
+# Resized images
 static/processed_images
+
+# Zola executables
+zola.exe
