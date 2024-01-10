@@ -6,6 +6,14 @@
         {% set sec = section.title | default(value="404") %}
         {% set title = page.title | default (value=sec) %}
         <title>{{ title ~ " | SS3D" }}</title>
+        <meta property="og:title" content="{{ title }}" />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="SS3D" />
+        {% if page.description %}
+        <meta name="description" content="{{ page.description }}" />
+        <meta property="og:description" content="{{ page.description }}" />
+        {% endif %}
+        {% block head %}{% endblock %}
         <link rel="stylesheet" type="text/css" href="{{ get_url(path="site.css") }}">
         <link rel="shortcut icon" type="image/x-icon" href="{{ get_url(path="favicon.ico") }}">
         <script>
