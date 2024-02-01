@@ -31,7 +31,7 @@ animators_kit_url = "https://www.youtube.com/@spacestation3d"
 subscribestar_url = "https://www.subscribestar.com/space-station-3d"
 gitbook_url = "https://ss3d.gitbook.io"
 
-latest_release = "0.0.7.1"
+latest_release = "0.0.7.2"
 
 [[extra.social_icons]]
 title = "GitHub"

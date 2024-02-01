@@ -9,16 +9,18 @@
 <a href="https://github.com/RE-SS3D/SS3D-Website/blob/release/.github/workflows/build.yml"><img src="https://img.shields.io/github/actions/workflow/status/RE-SS3D/SS3D-Website/build.yml?style=plastic" alt="build status" align="right"></a>
 <h3>
 
+Ported from our [old website repo](https://github.com/RE-SS3D/SS3D-Websiteold).
+
 ## Local Setup
 
-This website is setup for use with [Zola](https://www.getzola.org). Install instructions for various platforms can be found [here](https://www.getzola.org/documentation/getting-started/installation/)
+This website is setup for use with [Zola](https://www.getzola.org). Install instructions for various platforms can be found [here](https://www.getzola.org/documentation/getting-started/installation/).
 
 ### Windows
 
 1. Clone this repo.
 2. Downloaded latest version (for windows) on [Zola's Github Releases](https://github.com/getzola/zola/releases).
 3. Move the downloaded .exe to the repo directory.
-4. Build the site by opening Command Prompt with the following commands:
+4. Build the site by opening Command Prompt and using the following commands:
 ```
     cd "<insert repo directory>"
     zola serve
