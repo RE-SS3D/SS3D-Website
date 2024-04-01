@@ -30,7 +30,7 @@ paypal_url = "https://www.paypal.me/SpaceStation3D"
 subscribestar_url = "https://www.subscribestar.com/space-station-3d"
 gitbook_url = "https://ss3d.gitbook.io"
 
-latest_release = "0.0.7.3"
+latest_release = "0.0.7.4"
 
 [[extra.social_icons]]
 title = "GitHub"
