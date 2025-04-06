@@ -135,7 +135,10 @@ title = "Art"
 
 # Probably Not
 
-{{ image(kind="post", src="assets/img/art/ProbablyNot/Malf.png") }}
+<div class='horizontal-2' markdown='1'>
+{{ image(kind="split", src="assets/img/art/ProbablyNot/ProbablyNot_Revolt.png") }}
+{{ image(kind="split", src="assets/img/art/ProbablyNot/Malf.png") }}
+</div>
 
 <div class='horizontal-2' markdown='1'>
 {{ image(kind="split", src="assets/img/art/ProbablyNot/Researcher.png") }}
