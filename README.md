@@ -18,14 +18,16 @@ This website is setup for use with [Zola](https://www.getzola.org). Install inst
 ### Windows
 
 1. Clone this repo.
-2. Downloaded latest version (for windows) on [Zola's Github Releases](https://github.com/getzola/zola/releases).
+2. Download Zola v0.18.0 (for windows) [here](https://github.com/getzola/zola/releases/tag/v0.18.0).
 3. Move the downloaded .exe to the repo directory.
-4. Build the site by opening Command Prompt and using the following commands:
+4. Build the site by opening Command Prompt (or Windows PowerShell) and using the following commands:
 ```
     cd "<insert repo directory>"
-    zola serve
+    zola serve (or "\.zola serve" if using Windows PowerShell)
 ```
 The site should host locally at <http://localhost:1111/>.
+
+Using a verson of Zola later than v0.18.0 will result in syntax errors.
 
 ## Creating the Devblog
 
