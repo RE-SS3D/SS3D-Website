@@ -19,7 +19,12 @@
 
 <centred>
     <h6>
-        <u><a href="{{ config.extra.github_game_url }}/releases/download/{{ config.extra.latest_release }}/SS3D_{{ config.extra.latest_release }}.zip">ss3d {{ config.extra.latest_release }}</a></u>
+        {# Latest release is fetched at build time; see templates/download.html. #}
+        {% set gh_headers = ["Accept=application/vnd.github+json"] %}
+        {% set gh_token = get_env(name="GITHUB_TOKEN", default="") %}
+        {% if gh_token %}{% set gh_headers = gh_headers | concat(with="Authorization=Bearer " ~ gh_token) %}{% endif %}
+        {% set latest = load_data(url="https://api.github.com/repos/RE-SS3D/SS3D/releases/latest", format="json", headers=gh_headers, required=false) %}
+        <u><a href="{{ get_url(path="download") }}">ss3d {% if latest %}{{ latest.tag_name }}{% else %}latest release{% endif %}</a></u>
     </h6>
 </centred>
 

@@ -1,12 +1,35 @@
-
 {% extends "base.html" %}
 
 {% block content %}
+{#
+  The latest release is looked up from the GitHub API at build time, so a new
+  game release only needs a site rebuild (see .github/workflows/build.yml),
+  not a commit to this repo. Prereleases (e.g. the nightly) are not "latest".
+#}
+{% set gh_headers = ["Accept=application/vnd.github+json"] %}
+{% set gh_token = get_env(name="GITHUB_TOKEN", default="") %}
+{% if gh_token %}{% set gh_headers = gh_headers | concat(with="Authorization=Bearer " ~ gh_token) %}{% endif %}
+{% set release = load_data(url="https://api.github.com/repos/RE-SS3D/SS3D/releases/latest", format="json", headers=gh_headers, required=false) %}
+
+{% set_global windows_url = "" %}
+{% if release %}
+  {% for asset in release.assets %}
+    {% if asset.name is containing("Windows") %}{% set_global windows_url = asset.browser_download_url %}{% endif %}
+  {% endfor %}
+{% endif %}
+{% set releases_page = config.extra.github_game_url ~ "/releases/latest" %}
+{% if windows_url %}{% set auto_url = windows_url %}{% else %}{% set auto_url = releases_page %}{% endif %}
+
+<meta http-equiv="refresh" content="5; URL={{ auto_url | safe }}" />
 
 <style type="text/css" media="screen">
   .container {
     margin: 10px auto;
     text-align: center;
+  }
+  .other-builds {
+    list-style: none;
+    padding: 0;
   }
 </style>
 
@@ -16,10 +39,24 @@
       <img src="{{ get_url(path="/assets/img/beep.png") }}" alt="beep banner">
     </picture>
   </div>
-  <meta http-equiv="refresh" content="7; URL={{ config.extra.github_game_url }}/releases/download/{{ config.extra.latest_release }}/SS3D_{{ config.extra.latest_release }}.zip" />
 
-  <h1>Downloading latest version of SS3D<br>(<strong><i>{{ config.extra.latest_release }}</i></strong>)...</h1>
-  <h3>if file does NOT automatically start downloading after 10 seconds, <a href="{{ config.extra.github_game_url }}/releases/download/{{ config.extra.latest_release }}/SS3D_{{ config.extra.latest_release }}.zip">click here</a>.</h3>
+  {% if release and windows_url %}
+  <h1>Downloading latest version of SS3D<br>(<strong><i>{{ release.tag_name }}</i></strong>) for Windows...</h1>
+  <h3>If the file does NOT automatically start downloading after 10 seconds, <a href="{{ windows_url | safe }}">click here</a>.</h3>
+
+  <h4>Other builds:</h4>
+  <ul class="other-builds">
+    {% for asset in release.assets %}
+    {% if asset.browser_download_url != windows_url %}
+    <li><a href="{{ asset.browser_download_url | safe }}">{{ asset.name }}</a></li>
+    {% endif %}
+    {% endfor %}
+    <li><a href="{{ release.html_url | safe }}">Changelog</a></li>
+  </ul>
+  {% else %}
+  <h1>Taking you to the latest release of SS3D...</h1>
+  <h3>If you are not redirected after 10 seconds, <a href="{{ releases_page | safe }}">click here</a>.</h3>
+  {% endif %}
 </div>
 
 {% endblock content %}

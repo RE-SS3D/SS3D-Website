@@ -8,6 +8,16 @@ on:
       - '.github/PULL_REQUEST_TEMPLATE.md'
       - '.gitignore'
       - 'README.md'
+  # The download links are fetched from the latest SS3D game release at build
+  # time, so rebuild regularly to pick up new releases without a commit here.
+  schedule:
+    - cron: '0 */6 * * *'
+  # Manual rebuild from the Actions tab.
+  workflow_dispatch:
+  # Lets the game repo trigger an immediate rebuild after publishing a release:
+  #   POST /repos/RE-SS3D/SS3D-Website/dispatches  {"event_type": "game-release"}
+  repository_dispatch:
+    types: [game-release]
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -18,6 +28,9 @@ jobs:
           tool: zola@0.17.2
       - name: Build site
         run: zola build
+        env:
+          # Authenticates the GitHub API call for the latest release (higher rate limit).
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Fix permissions
         run: |
           chmod -c -R +rX "public/"
